@@ -21,12 +21,20 @@ var server = http.createServer(app);
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "*",
+    origin: "http://localhost:5000",
     credentials: true
 }));
 
+
+// app.use((req,res,next)=>{
+//     res.header("Access-Control-Allow-Origin: http://localhost:5000");
+//     res.header("Access-Control-Allow-Credentials: true");
+//     res.header("Access-Control-Allow-Methods: GET, POST");
+//     res.header("Access-Control-Allow-Headers: Content-Type, *");
+//     next();
+//   })
 app.use(morgan('dev'));
-app.use("/", express.static(path.resolve(path.join(__dirname, "public"))));
+app.use("/", express.static(path.resolve(path.join(__dirname, "./signupform/build"))));
 app.use('/auth', authRoutes)
 
 
@@ -78,7 +86,7 @@ app.use(function (req, res, next) {
 app.get("/profile", (req, res, next) => {
     console.log(req.body);
 
-    userModel.findById(req.body.jToken.id, 'name email phone gender profilePic createdOn', function (err, doc) {
+    userModel.findById(req.body.jToken.id, 'name email createdOn', function (err, doc) {
         if (!err) {
             res.send({
                 profile: doc

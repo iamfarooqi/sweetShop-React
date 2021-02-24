@@ -14,44 +14,39 @@ import {
 // import Login from "./components/login/login"
 import Signup from "./components/signup/signup"
 // import Dashboard from "./components/dashboard/dashboard"
-
-
-
-
+// import { useGlobalState } from "./state/GlobalState";
 
 function App() {
+  // const globalState = useGlobalState();
+  // const setGlobalState = useSetGlobalState();
   return (
     <div className="App">
-
-
-
-
 
       <Router>
 
         <nav>
           <ul>
-            <li>
+            {/* <li>
               <Link to="/">login</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/signup">Signup</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/dashboard">dashboard</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
 
         <Switch>
 
-          <Route exact={true}  path="/signup">
-            {/* <Login /> */}
-          </Route>
-          <Route path="/dashboard">
-            {/* <Dashboard /> */}
-          </Route>
+          {/* <Route exact={true}  path="/">
+            <Login />
+          </Route> */}
+          {/* <Route path="/dashboard">
+            <Dashboard />
+          </Route> */}
 
           <Route path="/signup">
             <Signup />

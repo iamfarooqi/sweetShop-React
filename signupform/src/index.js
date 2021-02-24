@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// import '@fortawesome/fontawesome-free/css/all.min.css'; 
+// import'bootstrap-css-only/css/bootstrap.min.css'; 
+// import'mdbreact/dist/css/mdb.css';
+
+import { GlobalStateProvider } from './state/GlobalState';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GlobalStateProvider>
+      <App />
+    </GlobalStateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

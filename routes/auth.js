@@ -21,7 +21,7 @@ api.post("/signup", (req, res, next) => {
     ) {
 
         res.status(403).send(`
-            please send name, email, password, phone in json body.
+            please send name, email, password json body.
             e.g:
             {
                 "name": "farooqi",
@@ -74,6 +74,46 @@ api.post("/signup", (req, res, next) => {
         })
 
 })
+
+
+
+// api.post("/validemail", (req, res, next) => {
+
+//     if (
+//         !req.body.email
+//     ) {
+
+//         res.status(403).send(`
+//             please send name, email, password and  in json body.
+//             e.g:
+//             {
+//                 "name": "farooqi",
+//                 "email": "farooqi@gmail.com",
+//                 "password": "123"
+                
+//             }`)
+//         return;
+//     }
+//     userModel.findOne({ email: req.body.email }, function (err, doc) {
+//         if (!err) {
+//             if (doc) {
+//                 res.send({
+//                     status: 200,
+//                     isFound: true
+//                 })
+//             } else {
+//                 res.send({
+//                     status: 200,
+//                     isFound: false
+//                 })
+//             }
+//         } else {
+//             res.send({
+//                 status: 500
+//             })
+//         }
+//     });
+// });
 
 
 
