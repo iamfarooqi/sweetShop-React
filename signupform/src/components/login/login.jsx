@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios'
+axios.defaults.withCredentials = true
+
 // import url from 'url'
 
 
@@ -22,15 +24,13 @@ function Login() {
       data: {
         email: document.getElementById("email").value,
         password: document.getElementById("password").value,
-      }, withCredentials: true
-
+      }
     }).then((response) => {
       console.log(response);
-      alert(response.data.message)
-      // window.location.href = "home.html"
+      alert("done",response.data.message)
     }, (error) => {
       console.log(error);
-      alert("Please write your correct email and password")
+      alert("correct your email and password")
     });
 
   }

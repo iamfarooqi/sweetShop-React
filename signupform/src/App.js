@@ -11,7 +11,7 @@ import {
   Link
 } from "react-router-dom";
 
-// import Login from "./components/login/login"
+import Login from "./components/login/login"
 import Signup from "./components/signup/signup"
 // import Dashboard from "./components/dashboard/dashboard"
 // import { useGlobalState } from "./state/GlobalState";
@@ -26,9 +26,9 @@ function App() {
 
         <nav>
           <ul>
-            {/* <li>
+            <li>
               <Link to="/">login</Link>
-            </li> */}
+            </li>
             <li>
               <Link to="/signup">Signup</Link>
             </li>
@@ -41,9 +41,9 @@ function App() {
 
         <Switch>
 
-          {/* <Route exact={true}  path="/">
+          <Route exact={true}  path="/">
             <Login />
-          </Route> */}
+          </Route>
           {/* <Route path="/dashboard">
             <Dashboard />
           </Route> */}
