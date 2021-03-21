@@ -1,0 +1,48 @@
+h2,
+h3 {
+  margin: 0.5rem 0;
+}
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
+.row.center {
+  align-items: center;
+}
+.basket{
+  box-shadow: 0 0 10px grey;
+  padding: 40px 20px 40px 20px;
+}
+button {
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  margin: 0.1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #404040 solid;
+  background-color: #f0c040;
+  width: 100%;
+  cursor: pointer;
+}
+button.add {
+  background-color: #0062cc;
+  color: #fff;
+  border: none;
+  width: 1.5rem;
+}
+button.remove {
+  background-color: #f04040;
+  color: #fff;
+  border: none;
+  width: 1.5rem;
+}
+button.badge {
+  background-color: #f04040;
+  border: none;
+  color: #ffffff;
+  width: 1.5rem;
+}
