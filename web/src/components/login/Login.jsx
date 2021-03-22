@@ -60,8 +60,8 @@ function Login() {
                                 </div><br />
                                 <div className="col">
                                     <button className='btn btn-primary' type="submit">Login</button>
-                                    <p className='mt-3' onClick={goToForget}
-                                        style={{ cursor: "pointer" }}>Forget Password</p>
+                                    {/* <p className='mt-3' onClick={goToForget} */}
+                                        {/* style={{ cursor: "pointer" }}>Forget Password</p> */}
                                 </div><br />
                                 {show ? <div className="alert alert-danger" role="alert">
                                     {show}
