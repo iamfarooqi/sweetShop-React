@@ -19,7 +19,7 @@ app.use(cors({
     credentials: true
 }));
 app.use(morgan('dev'));
-// app.use("/", express.static(path.resolve(path.join(__dirname, "public")));
+app.use("/", express.static(path.resolve(path.join(__dirname, "public"))));
 
 app.get('/', (req, res, next) => {
     res.send("running")
@@ -29,7 +29,7 @@ app.get('/', (req, res, next) => {
 app.use('/', authRoutes);
 app.use('/', adminRoutes);
 app.use(function (req, res, next) {
-    console.log(req.cookies.jToken)
+    // console.log(req.cookies.jToken)
     if (!req.cookies.jToken) {
         res.status(401).send("include http-only credentials with every request")
         return;
@@ -41,7 +41,7 @@ app.use(function (req, res, next) {
             const nowDate = new Date().getTime();
             const diff = nowDate - issueDate;
 
-            if (diff > 300000) {
+            if (diff > 30000000) {
                 res.status(401).send("token expired")
             } else {
                 var token = jwt.sign({
@@ -66,11 +66,11 @@ app.use(function (req, res, next) {
 
 app.get("/adminProfile", (req, res, next) => {
 
-    console.log(req.body)
+    // console.log(req.body)
 
     foodUserModel.findById(req.body.jToken.id, 'name email createdOn',
         function (err, doc) {
-            console.log( "doc",doc)
+            // console.log( "doc",doc)
             if (!err) {
                 res.send({
                     status: 200,
@@ -86,11 +86,11 @@ app.get("/adminProfile", (req, res, next) => {
 })
 app.get("/profile", (req, res, next) => {
 
-    console.log(req.body)
+    // console.log(req.body)
 
     foodUserModel.findById(req.body.jToken.id, 'name email phone createdOn',
         function (err, doc) {
-            console.log( "doc",doc)
+            // console.log( "doc",doc)
             if (!err) {
                 res.send({
                     status: 200,
@@ -106,7 +106,7 @@ app.get("/profile", (req, res, next) => {
 })
 
 app.post("/order",(req,res,next)=>{
-    console.log("fsfsf",req.body)
+    // console.log("fsfsf",req.body)
     if (!req.body.orders || !req.body.total) {
 
         res.status(403).send(`
@@ -141,7 +141,7 @@ app.post("/order",(req,res,next)=>{
             })
         }
         else{
-            console.log(err)
+            // console.log(err)
         }
     })
 })

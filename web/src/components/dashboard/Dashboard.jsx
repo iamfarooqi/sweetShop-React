@@ -60,14 +60,14 @@ function Dashboard() {
         });
     }
     return (
-        <div>
-            <Navbar logout={logout}/>
-            <div className='bg-primary py-2'>
-                <div className="container">
+        <div >
+            <div logout={logout}/>
+            <div className='bg-primary py-2'  >
+                <div  className="container">
                     <h2 className="mr-4 text-white">Welcome </h2>
                 </div>
             </div>
-            <div className="row1">
+            <div  className="row1">
                 <Main products={products} onAdd={onAdd}></Main>
                 <Basket
                     cartItems={cartItems}

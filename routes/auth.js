@@ -19,10 +19,10 @@ router.post("/signup", (req, res, next) => {
             please send name, email, passwod, phone and gender in json body.
             e.g:
             {
-                "name": "jahanzaib",
-                "email": "jahanzaib@gmail.com",
+                "name": "farooqi",
+                "email": "farooqi@gmail.com",
                 "password": "123",
-                "phone": "034320492",
+                "phone": "45646456",
                 "gender": "Male"
             }`)
         return;
@@ -75,7 +75,7 @@ router.post("/login", (req, res, next) => {
             please send email and passwod in json body.
             e.g:
             {
-                "email": "jahanzaib@gmail.com",
+                "email": "farooqi@gmail.com",
                 "password": "123",
             }`)
         return;

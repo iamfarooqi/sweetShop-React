@@ -14,7 +14,7 @@ router.post("/adminLogin", (req, res, next) => {
             please send email and passwod in json body.
             e.g:
             {
-                "email": "jahanzaib@gmail.com",
+                "email": "farooqi@gmail.com",
                 "password": "123",
             }`)
         return;
