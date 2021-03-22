@@ -70,7 +70,7 @@ function AdminDashboard() {
                                     </div>
                                     <div>
                                         <span className='float-right mt-2'>
-                                            <button onClick={() => {
+                                            <button  style={{backgroundColor:"#FFC72C", color:"#DA291C", border:"none", fontWeight:"bolder"}} onClick={() => {
                                                 updateStatus(v._id)
                                             }} >Confirm Order</button>
                                         </span>

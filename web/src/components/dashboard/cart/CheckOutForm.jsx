@@ -54,7 +54,7 @@ export default function CheckoutFrom() {
                                 <label htmlFor="inputAddress">Address</label>
                                 <input type="text" className="form-control" id="address" placeholder="1234 Main St" required/>
                             </div>
-                            <button type="submit" className="btn btn-primary">Confirm Order</button>
+                            <button  style={{backgroundColor:"#FFC72C", color:"#DA291C", border:"none", fontWeight:"bolder"}} type="submit" className="btn btn-primary">Confirm Order</button>
                         </form>
                         {msg ? <div class="alert alert-success mt-3" role="alert">
                             {msg}

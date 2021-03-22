@@ -27,11 +27,11 @@ export default function Basket(props) {
             <div key={item.id} className="row">
               <div className="col-md-4">{item.name}</div>
               <div className="col-md-4 text-center">
-                <button onClick={() => onRemove(item)} className="remove">
-                  -
+                <button  style={{backgroundColor:"#FFC72C", color:"#DA291C"}} onClick={() => onRemove(item)} className="remove">
+                  &#x2796;
               </button>
-                <button onClick={() => onAdd(item)} className="add">
-                  +
+                <button  style={{backgroundColor:"#FFC72C", color:"#DA291C"}} onClick={() => onAdd(item)} className="add">
+                  &#10133;
               </button>
               </div>
 
@@ -49,12 +49,12 @@ export default function Basket(props) {
                   <strong>Total Price</strong>
                 </div>
                 <div className="col-6 text-right">
-                  <strong>PKR: {totalPrice}</strong>
+                  <strong>Rs: {totalPrice}</strong>
                 </div>
               </div>
               <hr />
               <div className="row1">
-                <button
+                <button style={{backgroundColor:"#FFC72C", color:"#DA291C", border:"none", fontWeight:"bolder"}}
                   className="btn btn-primary" onClick={checkOut}>
                   Checkout
               </button><br />

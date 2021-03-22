@@ -67,7 +67,7 @@ function AddProducts() {
                                     <label className="custom-file-label" for="customFile">Choose Image</label>
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-primary">Confirm Order</button>
+                            <button  style={{backgroundColor:"#FFC72C", color:"#DA291C", border:"none", fontWeight:"bolder"}} type="submit" className="btn btn-primary">Add Product</button>
                         </form><br/>
                         {msg ? <div class="alert alert-success" role="alert">
                             {msg}
