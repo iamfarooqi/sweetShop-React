@@ -53,7 +53,7 @@ function Signup() {
             <div>
                 <div className='container'>
                     <div className='row justify-content-center'>
-                        <div className='col-md-5 form'>
+                        <div style={{color:"#DA291C",fontWeight:"bolder"}} className='col-md-5 form'>
                             {change ? <div>
                                 <h1 className="text-center">Signup</h1>
                                 <form onSubmit={signup}>
@@ -75,7 +75,7 @@ function Signup() {
                                                 placeholder="Password" required id="password" />
                                         </div><br />
                                         <div className="col">
-                                            <button className='btn btn-primary'>Signup</button>
+                                            <button style={{backgroundColor:"#FFC72C", color:"#DA291C", border:"none", fontWeight:"bolder"}} className='btn btn-primary'>Signup</button>
                                         </div><br/>
                                         <div className="col">
                                             <p>Already have an account?

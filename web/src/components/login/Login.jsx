@@ -46,7 +46,7 @@ function Login() {
         <div>
             <div className='container'>
                 <div className='row justify-content-center'>
-                    <div className='col-md-5 form'>
+                    <div style={{color:"#DA291C", fontWeight:"bolder"}} className='col-md-5 form'>
                         <h1 className="text-center">Login</h1>
                         <form onSubmit={login}>
                             <div className="form-col">
@@ -59,7 +59,7 @@ function Login() {
                                         placeholder="Password" required id="password" />
                                 </div><br />
                                 <div className="col">
-                                    <button className='btn btn-primary' type="submit">Login</button>
+                                    <button style={{backgroundColor:"#FFC72C", color:"#DA291C", border:"none", fontWeight:"bolder"}} className='btn btn-primary' type="submit">Login</button>
                                     {/* <p className='mt-3' onClick={goToForget} */}
                                         {/* style={{ cursor: "pointer" }}>Forget Password</p> */}
                                 </div><br />

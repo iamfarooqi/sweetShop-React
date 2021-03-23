@@ -24,7 +24,7 @@ function Logout() {
     }
     return (
         <div>
-            <a style={{backgroundColor:"#FFC72C", color:"#DA291C", border:"none", fontWeight:"bolder"}} className="text-success btn btn-outline-success mr-3" onClick={logout}>Logout<span className="sr-only">(current)</span></a>
+            <a onClick={logout}><i style={{color:"#DA291C", }}class="fas fa-sign-out-alt"></i><span className="sr-only">(current)</span></a>
         </div>
     )
 }

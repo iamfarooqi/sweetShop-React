@@ -51,18 +51,26 @@ function Dashboard() {
     };
     ///////////////////////////////
 
-    return (
-        <div  >
-            <div  className='bg-primary pt-3 pb-5 sticky-top'>
-                <div  className="container">
-                    <div className="col-md-12">
-                        <a className="btn btn-light float-right"
-                            onClick={() => setHideCart(prev => !prev)} >
-                           <i class="fas fa-shopping-cart"/><span className="ml-1">{cartItems.length}</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    return (<>
+         
+             <div style={{color:"#DA291C"}} className='pt-1 pb-3  sticky-top'>
+               
+
+             {/* <marquee style={{border:"1px solid red", width:"50%"}} behavior="scroll" direction="left">Here is some scrolling text... right to left!</marquee> */}
+
+             
+                  <a style={{backgroundColor:"#FFC72C", color:"#DA291C", marginRight:"6rem", paddingTop:"0.8rem", border:"none"}} id="cart" className="btn btn-light float-right"
+                      onClick={() => setHideCart(prev => !prev)} >
+                     <i class="fas fa-shopping-cart"/><span className="ml-1">{cartItems.length}</span>
+                  </a>
+              
+              
+                 
+             </div>
+
+
+
+             
             <div className="row1">
                 {hideCart === true ?
                     <main className="container">
@@ -74,6 +82,7 @@ function Dashboard() {
                                         <img className="w-100" height="200" src={product.image} alt={product.name} />
                                         <h3>{product.name}</h3>
                                         <div>Rs: {product.price}/kg</div>
+                                       <div><h3>Description</h3> <p>{product.description}</p></div>
                                         <div>
                                             <button  style={{backgroundColor:"#FFC72C", color:"#DA291C", border:"none", fontWeight:"bolder"}} onClick={() => onAdd(product)} className="btn btn-primary">Add To Cart</button>
                                         </div>
@@ -85,8 +94,9 @@ function Dashboard() {
                     <>
                         <Basket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} /></>}
             </div>
-        </div>
-    )
+        
+            
+  </>)
 }
 
 export default Dashboard
