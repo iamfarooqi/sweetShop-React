@@ -10,6 +10,7 @@ import Basket from '../dashboard/cart/Basket'
 import CheckOutForm from '../dashboard/cart/CheckOutForm'
 import AddProducts from '../admin/AddProducts'
 import MyOrders from '../dashboard/MyOrders'
+import Products from '../admin/products'
 import basket from '../dashboard/cart/Basket'
 import { useGlobalState } from '../../context/globalContext'
 import Navbar from '../Navbar/Navbar'
@@ -48,6 +49,7 @@ function RoutesConfig() {
                         <Navbar />
                         <Route exact path="/" component={AdminDashboard} />
                         <Route exact path="/addproducts" component={AddProducts} />
+                        <Route  path="/getProducts" component={Products} />
                         <Route path="*" />
                         <Redirect to="/" />
                         <Route />

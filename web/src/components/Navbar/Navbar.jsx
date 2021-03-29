@@ -27,6 +27,9 @@ function Navbar() {
                         </> :
                         <>
                             <ul className="navbar-nav mr-auto">
+                            <li className="nav-item active">
+                                    <Link style={{color:"#DA291C", fontWeight:"bolder"}} className="nav-link" to="/getProducts">Products <span className="sr-only">(current)</span></Link>
+                                </li>
                                 <li className="nav-item active">
                                     <Link style={{color:"#DA291C", fontWeight:"bolder"}} className="nav-link" to="/">Admin Dashboard <span className="sr-only">(current)</span></Link>
                                 </li>
